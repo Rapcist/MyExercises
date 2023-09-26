@@ -5,4 +5,5 @@ using namespace std;
 int main() {
 	constexpr string abc{"1488"};
 	cout<<abc;
+	return 0;
 }

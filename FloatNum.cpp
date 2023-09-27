@@ -5,15 +5,16 @@ using namespace std;
 
 int main() {
   vector<double> arr;
-  //конечно можно и без дополнительной перем.,
-  //но она у меня в массив попадает:((
   double tmp{1};
-  while(cin>>tmp){
+  cin>>tmp;
+  while(tmp){
     arr.push_back(tmp);
+    cin>>tmp;
   }
   cout<<"Res:\n";
+  for(int i{0};i< 50;++i) cout<<"=";
   for(auto db : arr){
-    auto s {format("\n|{0:<8.3e}|{0:#>+12.5f}|{0:?^16.7g}|\n",db)};
+    auto s {format("\n|{0:.<16.3e}|{0:#>+12.5f}|{0:?^16.7g}|\n",db)};
     cout<<s;
     for(auto ch: s) cout<<"=";
   }

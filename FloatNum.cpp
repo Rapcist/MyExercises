@@ -19,3 +19,5 @@ int main() {
     for(auto ch: s) cout<<"=";
   }
 }
+//std::vector<basic_string<char>> s;
+//auto s {f()}

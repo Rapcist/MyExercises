@@ -1,0 +1,248 @@
+\doxysection{matrix.\+hpp}
+\hypertarget{matrix_8hpp_source}{}\label{matrix_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MATRIX}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MATRIX}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \#include\ <initializer\_list>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }Math\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ TODO:\ add\ support\ for\ different\ ways\ to\ calculate\ determinat}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}(\textcolor{keywordtype}{size\_t}\ x\ =\ 0,\ \textcolor{keywordtype}{size\_t}\ y\ =\ 0);}
+\DoxyCodeLine{00022\ \ \ \textcolor{comment}{//\ explicit\ Matrix(std::initializer\_list<T>\ init);}}
+\DoxyCodeLine{00023\ \ \ \textcolor{comment}{/*\ \ \string~Matrix()\ =\ default;}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ explicit\ Matrix(const\ Matrix<T>\ \&\ rhs);}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ explicit\ Matrix(Matrix<T>\&\&\ rhs);}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ Matrix<T>\ \&\ operator=(const\ Matrix<T>\ rhs)\ noexcept;}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ Matrix<T>\ \&\ operator=(Matrix<T>\&\&\ rhs)\ noexcept;*/}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{auto}\ \&operator()(std::size\_t\ x,\ std::size\_t\ y);}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&operator()(std::size\_t\ x,\ std::size\_t\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{auto}\ \&at(std::size\_t\ x,\ std::size\_t\ y);}
+\DoxyCodeLine{00032\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&at(std::size\_t\ x,\ std::size\_t\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ std::size\_t\ getHeight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ std::size\_t\ getWidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ [[nodiscard]]\ \textcolor{keyword}{auto}\ operator<=>(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ ob)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{void}\ printMatrix()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::size\_t\ MaxHeight\{100\};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::size\_t\ MaxWidth\{100\};}
+\DoxyCodeLine{00044\ \ \ std::size\_t\ m\_width\{0\},\ m\_height\{0\};}
+\DoxyCodeLine{00045\ \ \ std::vector<T>\ m\_matrix;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00048\ \textcolor{comment}{template<typename\ T>}}
+\DoxyCodeLine{00049\ \textcolor{comment}{class\ Determinat\{}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ virtual\ determinat(const\ Matrix<T>\ \&\ ob)\ =\ 0;}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\}}}
+\DoxyCodeLine{00052\ \textcolor{comment}{}}
+\DoxyCodeLine{00053\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ MISC.\ FUNCS}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ throws:\ invalid\_argument}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00058\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}<\textcolor{keyword}{decltype}(T()\ +\ E())>\ \textcolor{keyword}{operator}+(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ \&lhs,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<E>}}\ \&rhs);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ throws:\ invalid\_argument}}
+\DoxyCodeLine{00062\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00063\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}<\textcolor{keyword}{decltype}(T()\ *\ E())>\ \textcolor{keyword}{operator}*(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ \&lhs,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<E>}}\ \&rhs);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{auto}\ initializeMatrix(\mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ \&ob);}
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ decomposition\ method?\ dec\_col\ -\/\ column\ by\ which\ the\ decomposition\ is}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ performed\ throws:\ invalid\_argument}}
+\DoxyCodeLine{00069\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00070\ \textcolor{keyword}{auto}\ determinat(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ \&ob,\ std::size\_t\ dec\_col\ =\ 0);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00073\ \textcolor{keyword}{auto}\ additionalMinor(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ \&ob,\ std::size\_t\ out\_row,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ out\_column);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{auto}\ transposition(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ \&ob);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00079\ \textcolor{keyword}{auto}\ inverseMatrix(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>}}\ \&ob)\ \textcolor{comment}{/*-\/>decltype(ob)*/};}
+\DoxyCodeLine{00080\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/>}}
+\DoxyCodeLine{00081\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00082\ \mbox{\hyperlink{class_math_1_1_matrix}{Matrix<T>::Matrix}}(\textcolor{keywordtype}{size\_t}\ x,\ \textcolor{keywordtype}{size\_t}\ y)}
+\DoxyCodeLine{00083\ \ \ \ \ :\ m\_width\{std::min(x,\ MaxWidth)\},\ m\_height\{std::min(y,\ MaxHeight)\},}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ m\_matrix\{std::vector<T>(m\_height\ *\ m\_width)\}\ \{}
+\DoxyCodeLine{00085\ \ \ \textcolor{comment}{//\ m\_matrix.reserve(m\_height*m\_width);}}
+\DoxyCodeLine{00086\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{comment}{//\ template<typename\ T>}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ Matrix<T>::Matrix(std::initializer\_list<T>\ init)\ :\ m\_matrix\{init\}\{\}}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00092\ \textcolor{keyword}{inline}\ \textcolor{keyword}{auto}\ \&Matrix<T>::operator()(std::size\_t\ x,\ std::size\_t\ y)\ \{}
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordflow}{return}\ m\_matrix[x\ *\ m\_width\ +\ y];}
+\DoxyCodeLine{00094\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00097\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&Matrix<T>::operator()(std::size\_t\ x,\ std::size\_t\ y)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordflow}{return}\ m\_matrix[x\ *\ m\_width\ +\ y];}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ \textcolor{keyword}{auto}\ \&Matrix<T>::at(std::size\_t\ x,\ std::size\_t\ y)\ \{}
+\DoxyCodeLine{00102\ \ \ \textcolor{keywordflow}{return}\ m\_matrix.at(x\ *\ m\_width\ +\ y);}
+\DoxyCodeLine{00103\ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00106\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&Matrix<T>::at(std::size\_t\ x,\ std::size\_t\ y)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordflow}{return}\ m\_matrix.at(x\ *\ m\_width\ +\ y);}
+\DoxyCodeLine{00108\ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ Matrix<T>::getHeight()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordflow}{return}\ m\_height;}
+\DoxyCodeLine{00112\ \}}
+\DoxyCodeLine{00113\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ Matrix<T>::getWidth()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordflow}{return}\ m\_width;}
+\DoxyCodeLine{00115\ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00118\ \textcolor{keyword}{auto}\ Matrix<T>::operator<=>(\textcolor{keyword}{const}\ Matrix<T>\ ob)\ \textcolor{keyword}{const}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00121\ Matrix<\textcolor{keyword}{decltype}(T()\ +\ E())>\ \textcolor{keyword}{operator}+(\textcolor{keyword}{const}\ Matrix<T>\ \&lhs,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Matrix<E>\ \&rhs)\ \{}
+\DoxyCodeLine{00123\ \ \ \textcolor{keywordflow}{if}\ (lhs.getHeight()\ !=\ rhs.getHeight()\ ||\ lhs.getWidth()\ !=\ rhs.getWidth())\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument\{\textcolor{stringliteral}{"{}invalid\ argument"{}}\};}
+\DoxyCodeLine{00125\ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ Matrix<\textcolor{keyword}{decltype}(T()\ +\ E())>\ tmp\{lhs.getWidth(),\ lhs.getHeight()\};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ row\{0\};\ row\ <\ lhs.getWidth();\ ++row)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ column\{0\};\ column\ <\ lhs.getHeight();\ ++column)\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ tmp(row,\ column)\ =\ lhs(row,\ column)\ +\ rhs(row,\ column);}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{00135\ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00138\ Matrix<\textcolor{keyword}{decltype}(T()\ *\ E())>\ \textcolor{keyword}{operator}*(\textcolor{keyword}{const}\ Matrix<T>\ \&lhs,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Matrix<E>\ \&rhs)\ \{}
+\DoxyCodeLine{00140\ \ \ \textcolor{keywordflow}{if}\ (lhs.getHeight()\ !=\ rhs.getWidth())\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument\{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}invalid\ argument:\ sizes\ of\ matrices\ must\ be\ the\ same"{}}\};}
+\DoxyCodeLine{00143\ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ Matrix<\textcolor{keyword}{decltype}(T()\ *\ E())>\ tmp\{lhs.getWidth(),\ rhs.getHeight()\};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ row\{0\};\ row\ <\ tmp.getWidth();\ ++row)\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ column\{0\};\ column\ <\ tmp.getHeight();\ ++column)\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\{0\};\ k\ <\ lhs.getHeight();\ ++k)\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ tmp(row,\ column)\ +=\ lhs(row,\ k)\ *\ rhs(k,\ column);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ Matrix<T>::Matrix::printMatrix()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00157\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ row\{0\};\ row\ <\ getWidth();\ ++row)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}|\ "{}};}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ column\{0\};\ column\ <\ getHeight();\ ++column)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ std::cout\ <<\ std::format(\textcolor{stringliteral}{"{}\{:<9.3\}\ "{}},\ (*\textcolor{keyword}{this})(row,\ column));}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}|\(\backslash\)n"{}};}
+\DoxyCodeLine{00163\ \ \ \}}
+\DoxyCodeLine{00164\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00165\ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00168\ \textcolor{keyword}{auto}\ determinat(\textcolor{keyword}{const}\ Matrix<T>\ \&ob,\ std::size\_t\ dec\_col)\ \{}
+\DoxyCodeLine{00169\ \ \ \textcolor{keywordflow}{if}\ (ob.getHeight()\ !=\ ob.getWidth())\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument\{\textcolor{stringliteral}{"{}Required\ square\ matrix"{}}\};}
+\DoxyCodeLine{00171\ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \textcolor{keywordflow}{if}\ (ob.getHeight()\ ==\ 2)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ ob(0,\ 0)\ *\ ob(1,\ 1)\ -\/\ ob(1,\ 0)\ *\ ob(0,\ 1);}
+\DoxyCodeLine{00175\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ob.getHeight()\ ==\ 1)}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{return}\ ob(0,\ 0);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ T\ det\{\};}
+\DoxyCodeLine{00179\ \ \ \textcolor{comment}{//\ check\_for\_null()\ //may\ will\ be\ helpful\ laters}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ dec\_col\ =\ std::min(dec\_col,\ ob.getHeight()\ -\/\ 1);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ row\{0\};\ row\ <\ ob.getWidth();\ ++row)\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ det\ +=\ ob(row,\ dec\_col)\ *\ determinat(additionalMinor(ob,\ row,\ dec\_col))\ *}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ ((row\ +\ dec\_col)\ \%\ 2\ ==\ 0\ ?\ 1\ :\ -\/1);}
+\DoxyCodeLine{00186\ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \textcolor{keywordflow}{return}\ det;}
+\DoxyCodeLine{00188\ \}}
+\DoxyCodeLine{00189\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00190\ \textcolor{keyword}{auto}\ additionalMinor(\textcolor{keyword}{const}\ Matrix<T>\ \&ob,\ std::size\_t\ out\_row,}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ out\_column)\ \{}
+\DoxyCodeLine{00192\ \ \ Matrix<T>\ minor\{ob.getWidth()\ -\/\ 1,\ ob.getHeight()\ -\/\ 1\};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ row\{0\};\ row\ <\ ob.getWidth();\ ++row)\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ column\{0\};\ column\ <\ ob.getHeight();\ ++column)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row\ <\ out\_row)\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (column\ <\ out\_column)\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ minor(row,\ column)\ =\ ob(row,\ column);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (column\ >\ out\_column)\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ minor(row,\ column\ -\/\ 1)\ =\ ob(row,\ column);}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (row\ >\ out\_row)\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (column\ <\ out\_column)\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ minor(row\ -\/\ 1,\ column)\ =\ ob(row,\ column);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (column\ >\ out\_column)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ minor(row\ -\/\ 1,\ column\ -\/\ 1)\ =\ ob(row,\ column);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \textcolor{keywordflow}{return}\ minor;}
+\DoxyCodeLine{00212\ \}}
+\DoxyCodeLine{00213\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{auto}\ transposition(\textcolor{keyword}{const}\ Matrix<T>\ \&ob)\ \{}
+\DoxyCodeLine{00214\ \ \ Matrix<T>\ trans\_matrix\{ob.getHeight(),\ ob.getWidth()\};}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ row\{0\};\ row\ <\ ob.getWidth();\ ++row)\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ column\{0\};\ column\ <\ ob.getHeight();\ ++column)\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ trans\_matrix(column,\ row)\ =\ ob(row,\ column);}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ \ \ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \textcolor{keywordflow}{return}\ trans\_matrix;}
+\DoxyCodeLine{00223\ \}}
+\DoxyCodeLine{00224\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{auto}\ inverseMatrix(\textcolor{keyword}{const}\ Matrix<T>\ \&ob)\ \{}
+\DoxyCodeLine{00225\ \ \ \textcolor{keywordflow}{if}\ (determinat(ob)\ ==\ 0)\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument\{\textcolor{stringliteral}{"{}Determinat\ equal\ to\ zero"{}}\};}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{comment}{//\ return\ ob;}}
+\DoxyCodeLine{00228\ \ \ \}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ Matrix<T>\ result\{ob.getWidth(),\ ob.getHeight()\};}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \textcolor{keyword}{auto}\ det\{determinat(ob)\};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ row\{0\};\ row\ <\ result.getWidth();\ ++row)\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ column\{0\};\ column\ <\ result.getHeight();\ ++column)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ result(row,\ column)\ =\ (determinat(additionalMinor(ob,\ row,\ column))\ *}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((row\ +\ column)\ \%\ 2\ ==\ 0\ ?\ 1\ :\ -\/1))\ /}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ det;}
+\DoxyCodeLine{00239\ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ result\ =\ transposition(result);}
+\DoxyCodeLine{00243\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00244\ \ \ \textcolor{comment}{//\ return\ transposition(result);\ //\ Will\ RVO\ or\ NRVO\ work???\ Which\ way\ is}}
+\DoxyCodeLine{00245\ \ \ \textcolor{comment}{//\ better?}}
+\DoxyCodeLine{00246\ \}}
+\DoxyCodeLine{00247\ \}\ \textcolor{comment}{//\ namespace\ Math}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,10 @@
+^F:\PROGRAMS\GIT\MYEXERCISES\MATRIX\CMAKELISTS.TXT
+setlocal
+F:\Programs\Cmake\bin\cmake.exe -SF:/Programs/Git/MyExercises/matrix -BF:/Programs/Git/MyExercises/matrix/build --check-stamp-file F:/Programs/Git/MyExercises/matrix/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

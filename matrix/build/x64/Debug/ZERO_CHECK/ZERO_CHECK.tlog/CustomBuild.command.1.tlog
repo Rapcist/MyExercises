@@ -1,0 +1,10 @@
+^F:\PROGRAMS\GIT\MYEXERCISES\MATRIX\BUILD\CMAKEFILES\4949186E03A4A229C591E6B6C7B6C15F\GENERATE.STAMP.RULE
+setlocal
+F:\Programs\Cmake\bin\cmake.exe -SF:/Programs/Git/MyExercises/matrix -BF:/Programs/Git/MyExercises/matrix/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/Programs/Git/MyExercises/matrix/build/MatrixTest.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

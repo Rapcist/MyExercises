@@ -59,6 +59,9 @@ int main(){
         cerr<<er.what();
     }
     //(one * inv).printMatrix();
+    for(int i {0}; i < 10 ; ++i){
+        cout<<fibNumber(i)<<' ';
+    }
     return 0;
 }
 template<typename T>

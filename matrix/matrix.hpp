@@ -18,12 +18,6 @@ namespace Math {
 template <typename T> class Matrix {
 public:
   explicit Matrix(std::size_t x = 0, std::size_t y = 0);
-  // explicit Matrix(std::initializer_list<T> init);
-  /*  ~Matrix() = default;
-    Matrix(const Matrix<T> & rhs);
-    Matrix(Matrix<T>&& rhs);
-    Matrix<T> & operator=(const Matrix<T> rhs) noexcept;
-    Matrix<T> & operator=(Matrix<T>&& rhs) noexcept;*/
 
   auto & operator()(std::size_t x, std::size_t y);
   const auto &operator()(std::size_t x, std::size_t y) const;
@@ -33,8 +27,6 @@ public:
   std::size_t getHeight() const;
   std::size_t getWidth() const;
 
-  //for what?
-  //[[nodiscard]] auto operator<=>(const Matrix<T> ob) const;
 
   void printMatrix() const;
 
@@ -42,7 +34,7 @@ private:
   static const std::size_t MaxHeight{100};
   static const std::size_t MaxWidth{100};
   std::size_t m_width{0}, m_height{0};
-  std::vector<T> m_matrix;//std::array???
+  std::vector<T> m_matrix;
 };
 /*
 template<typename T>
@@ -67,8 +59,9 @@ Matrix<decltype(T() * E())> operator*(const Matrix<T> &lhs,
 template <typename T, typename E>
 Matrix<decltype(T() * E())> operator*(E scalar, const Matrix<T> & ob);
 
-//template <typename T> auto initializeMatrix(Matrix<T> &ob);
 
+template <typename T, typename E>
+Matrix<decltype(T() * E())> operator*=(Matrix<T> &lhs, const Matrix<E> &rhs);
 // decomposition method? dec_col - column by which the decomposition is
 // performed 
 //throws: invalid_argument
@@ -260,5 +253,21 @@ Matrix<decltype(T() * E())> operator*(E scalar, const Matrix<T> & ob){
     }
   }
   return tmp;
+}
+
+template<typename T>
+auto initWithIdentityMatrix(std::size_t x = 0) {
+  auto result{Matrix<T> {x ,x} };
+  for(std::size_t row{0}; row < x ; ++row){
+       //result (row, row) = static_cast<T>(1);
+    result(row,row) = 1;
+}
+  return result;
+}
+
+template <typename T, typename E>
+Matrix<decltype(T() * E())> operator*=(Matrix<T> &lhs, const Matrix<E> &rhs){
+  
+  return lhs;
 }
 } // namespace Math

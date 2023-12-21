@@ -17,39 +17,52 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: F:/Garbadge/LLVM/bin/clang.exe 
+      Compiler:  
       Build flags: 
       Id flags:  
       
       The output was:
       0
+      Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
+      Сборка начата 20.12.2023 17:55:47.
+      
+      Проект "F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\3.27.6\\CompilerIdC\\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
+      PrepareForBuild:
+        Создание каталога "Debug\\".
+        Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+        Создание каталога "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Создание "Debug\\CompilerIdC.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+        Обращение к "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\3.27.6\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Файл "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" удаляется.
+        Обращение к "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Сборка проекта "F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\3.27.6\\CompilerIdC\\CompilerIdC.vcxproj" завершена (целевые объекты по умолчанию).
+      
+      Сборка успешно завершена.
+          Предупреждений: 0
+          Ошибок: 0
+      
+      Прошло времени 00:00:07.48
       
       
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
       
-      The C compiler identification is Clang, found in:
-        G:/Codes/Intersection/build/CMakeFiles/3.27.6/CompilerIdC/a.exe
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
-  -
-    kind: "message-v1"
-    backtrace:
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Detecting C compiler /showIncludes prefix:
-        
-  -
-    kind: "message-v1"
-    backtrace:
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Detecting C compiler /showIncludes prefix:
-        
+      The C compiler identification is MSVC, found in:
+        F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.exe
+      
   -
     kind: "message-v1"
     backtrace:
@@ -59,39 +72,80 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: F:/Garbadge/LLVM/bin/clang++.exe 
+      Compiler:  
       Build flags: 
       Id flags:  
       
       The output was:
       0
+      Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
+      Сборка начата 20.12.2023 17:55:57.
+      
+      Проект "F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\3.27.6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
+      PrepareForBuild:
+        Создание каталога "Debug\\".
+        Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+        Создание каталога "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Создание "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+        Обращение к "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\3.27.6\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Файл "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" удаляется.
+        Обращение к "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Сборка проекта "F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\3.27.6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" завершена (целевые объекты по умолчанию).
+      
+      Сборка успешно завершена.
+          Предупреждений: 0
+          Ошибок: 0
+      
+      Прошло времени 00:00:06.77
       
       
-      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
       
-      The CXX compiler identification is Clang, found in:
-        G:/Codes/Intersection/build/CMakeFiles/3.27.6/CompilerIdCXX/a.exe
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
+      The CXX compiler identification is MSVC, found in:
+        F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.exe
+      
+
+---
+events:
   -
     kind: "message-v1"
     backtrace:
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      Detecting CXX compiler /showIncludes prefix:
-        
+      The system is: Windows - 10.0.19045 - AMD64
   -
     kind: "message-v1"
     backtrace:
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      Detecting CXX compiler /showIncludes prefix:
-        
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: F:/Garbadge/LLVM/bin/clang.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      clang: error: unable to execute command: Couldn't execute program 'F:\\Garbadge\\LLVM\\bin\\clang.exe': <D4><E0><E9><EB> <EF><EE><E4><EA><E0><F7><EA><E8> <F1><EB><E8><F8><EA><EE><EC> <EC><E0><EB> <E4><EB><FF> <E7><E0><E2><E5><F0><F8><E5><ED><E8><FF> <EE><EF><E5><F0><E0><F6><E8><E8>.  (0x5AF)
+      
+      
   -
     kind: "try_compile-v1"
     backtrace:
@@ -101,97 +155,96 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-05mzdm"
-      binary: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-05mzdm"
+      source: "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-jl6pnf"
+      binary: "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-jl6pnf"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-05mzdm'
+        Change Dir: 'F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-jl6pnf'
         
-        Run Build Command(s): F:/Programs/Git/ninja/T/ninja.exe -v cmTC_ececc
-        [1/2] F:\\Garbadge\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_ececc.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_ececc.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_ececc.dir/CMakeCCompilerABI.c.obj -c F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeCCompilerABI.c
-        [2/2] cmd.exe /C "cd . && F:\\Garbadge\\LLVM\\bin\\clang.exe -fuse-ld=lld-link -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console CMakeFiles/cmTC_ececc.dir/CMakeCCompilerABI.c.obj -o cmTC_ececc.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_ececc.lib -Xlinker /pdb:cmTC_ececc.pdb -Xlinker /version:0.0     && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ef770.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
+        Сборка начата 20.12.2023 17:56:24.
         
-      exitCode: 0
+        Проект "F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jl6pnf\\cmTC_ef770.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        PrepareForBuild:
+          Создание каталога "cmTC_ef770.dir\\Debug\\".
+          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+          Создание каталога "F:\\Programs\\Git\\MyExercises\\Intersection\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jl6pnf\\Debug\\".
+          Создание каталога "cmTC_ef770.dir\\Debug\\cmTC_ef770.tlog\\".
+        InitializeBuildStatus:
+          Создание "cmTC_ef770.dir\\Debug\\cmTC_ef770.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_ef770.dir\\Debug\\cmTC_ef770.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ef770.dir\\Debug\\\\" /Fd"cmTC_ef770.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "F:\\Programs\\Cmake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+        
+        Необработанное исключение: OutOfMemoryException.
+        
+      exitCode: -532462766
   -
     kind: "try_compile-v1"
     backtrace:
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
       - "CMakeLists.txt:2 (project)"
     checks:
-      - "Detecting CXX compiler ABI info"
+      - "Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe"
     directories:
-      source: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-e2gtcd"
-      binary: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-e2gtcd"
+      source: "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-sxvavq"
+      binary: "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-sxvavq"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
-      variable: "CMAKE_CXX_ABI_COMPILED"
+      variable: "CMAKE_C_COMPILER_WORKS"
       cached: true
       stdout: |
-        Change Dir: 'G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-e2gtcd'
-        
-        Run Build Command(s): F:/Programs/Git/ninja/T/ninja.exe -v cmTC_e62f8
-        [1/2] F:\\Garbadge\\LLVM\\bin\\clang++.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_e62f8.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_e62f8.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_e62f8.dir/CMakeCXXCompilerABI.cpp.obj -c F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
-        [2/2] cmd.exe /C "cd . && F:\\Garbadge\\LLVM\\bin\\clang++.exe -fuse-ld=lld-link -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console CMakeFiles/cmTC_e62f8.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_e62f8.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_e62f8.lib -Xlinker /pdb:cmTC_e62f8.pdb -Xlinker /version:0.0     && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:83 (_record_compiler_features)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake:121 (_record_compiler_features_cxx)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
-      - "CMakeLists.txt:2 (project)"
-    checks:
-      - "Detecting CXX compile features"
-    directories:
-      source: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-m1enws"
-      binary: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-m1enws"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_CXX_FEATURE_TEST"
-      cached: true
-      stdout: |
-        Change Dir: 'G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-m1enws'
-        
-        Run Build Command(s): F:/Programs/Git/ninja/T/ninja.exe -v cmTC_07fab
-        [1/2] F:\\Garbadge\\LLVM\\bin\\clang++.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_07fab.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_07fab.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_07fab.dir/feature_tests.cxx.obj -c G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-m1enws/feature_tests.cxx
-        [2/2] cmd.exe /C "cd . && F:\\Garbadge\\LLVM\\bin\\clang++.exe -fuse-ld=lld-link -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console CMakeFiles/cmTC_07fab.dir/feature_tests.cxx.obj -o cmTC_07fab.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_07fab.lib -Xlinker /pdb:cmTC_07fab.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:83 (_record_compiler_features)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake:129 (_record_compiler_features_cxx)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
-      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
-      - "CMakeLists.txt:2 (project)"
-    checks:
-      - "Detecting CXX compile features"
-    directories:
-      source: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-lu0zj0"
-      binary: "G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-lu0zj0"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_CXX_FEATURE_TEST"
-      cached: true
-      stdout: |
-        Change Dir: 'G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-lu0zj0'
-        
-        Run Build Command(s): F:/Programs/Git/ninja/T/ninja.exe -v cmTC_3067f
-        [1/2] F:\\Garbadge\\LLVM\\bin\\clang++.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_3067f.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_3067f.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_3067f.dir/feature_tests.cxx.obj -c G:/Codes/Intersection/build/CMakeFiles/CMakeScratch/TryCompile-lu0zj0/feature_tests.cxx
-        [2/2] cmd.exe /C "cd . && F:\\Garbadge\\LLVM\\bin\\clang++.exe -fuse-ld=lld-link -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console CMakeFiles/cmTC_3067f.dir/feature_tests.cxx.obj -o cmTC_3067f.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_3067f.lib -Xlinker /pdb:cmTC_3067f.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
-        
-      exitCode: 0
+      exitCode: 1
 ...
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: F:/Garbadge/LLVM/bin/clang.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is Clang, found in:
+        F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        

@@ -6,7 +6,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.27.6/CMakeSystem.cmake"
+			"path" : "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/3.27.6/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -20,11 +20,11 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.27.6/CMakeCCompiler.cmake"
+			"path" : "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/3.27.6/CMakeCCompiler.cmake"
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
+			"path" : "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -88,7 +88,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.27.6/CMakeRCCompiler.cmake"
+			"path" : "F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/3.27.6/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -134,50 +134,12 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "F:/Programs/Cmake/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Modules/CTest.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Modules/CTestUseLaunchers.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Modules/CTestTargets.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Modules/DartConfiguration.tcl.in"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Modules/CPack.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Modules/CPackComponent.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Templates/CPackConfig.cmake.in"
-		},
-		{
-			"isExternal" : true,
-			"path" : "F:/Programs/Cmake/share/cmake-3.27/Templates/CPackConfig.cmake.in"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "G:/Codes/Intersection/build",
+		"build" : "F:/Programs/Git/MyExercises/Intersection/build",
 		"source" : "G:/Codes/Intersection"
 	},
 	"version" : 

@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_Intersection: phony || CMakeFiles/Inters
 
 build CMakeFiles/Intersection.dir/main.cpp.obj: CXX_COMPILER__Intersection_unscanned_Debug G$:/Codes/Intersection/main.cpp || cmake_object_order_depends_target_Intersection
   DEP_FILE = CMakeFiles\Intersection.dir\main.cpp.obj.d
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -std=c++20
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -std=c++20
   OBJECT_DIR = CMakeFiles\Intersection.dir
   OBJECT_FILE_DIR = CMakeFiles\Intersection.dir
   TARGET_COMPILE_PDB = CMakeFiles\Intersection.dir\
@@ -66,7 +66,7 @@ build CMakeFiles/Intersection.dir/main.cpp.obj: CXX_COMPILER__Intersection_unsca
 # Link the executable Intersection.exe
 
 build Intersection.exe: CXX_EXECUTABLE_LINKER__Intersection_Debug CMakeFiles/Intersection.dir/main.cpp.obj
-  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   LINK_FLAGS = -Xlinker /subsystem:console
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\Intersection.dir

@@ -24,6 +24,8 @@ class Point{
     void setCoordinate(Type coord, std::size_t x);
     void addCoordinate(Type coord);
     std::size_t size() const;
+    //
+    
     //const auto & getData() const; 
     //auto & getData();
 

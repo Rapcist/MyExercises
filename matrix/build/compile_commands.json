@@ -1,8 +1,0 @@
-[
-{
-  "directory": "F:/Programs/Git/MyExercises/matrix/build",
-  "command": "F:\\Garbadge\\LLVM\\bin\\clang++.exe -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -std=c++20 -o CMakeFiles\\Test.dir\\main.cpp.obj -c F:\\Programs\\Git\\MyExercises\\matrix\\main.cpp",
-  "file": "F:\\Programs\\Git\\MyExercises\\matrix\\main.cpp",
-  "output": "CMakeFiles\\Test.dir\\main.cpp.obj"
-}
-]

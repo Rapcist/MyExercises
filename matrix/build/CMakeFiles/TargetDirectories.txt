@@ -1,3 +1,0 @@
-F:/Programs/Git/MyExercises/matrix/build/CMakeFiles/Test.dir
-F:/Programs/Git/MyExercises/matrix/build/CMakeFiles/edit_cache.dir
-F:/Programs/Git/MyExercises/matrix/build/CMakeFiles/rebuild_cache.dir

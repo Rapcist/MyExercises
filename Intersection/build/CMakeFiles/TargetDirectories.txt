@@ -1,5 +1,0 @@
-F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/Intersection.dir
-F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/package.dir
-F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/package_source.dir
-F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/edit_cache.dir
-F:/Programs/Git/MyExercises/Intersection/build/CMakeFiles/rebuild_cache.dir

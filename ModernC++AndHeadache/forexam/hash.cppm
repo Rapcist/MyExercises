@@ -32,7 +32,7 @@ export namespace HASHI {
         //INTERACTION
         void insert(Key key, Type data){
             auto pos {HashFunc{}(key)};
-            m_table.resize(pos+1);
+            if(pos >= m_table.size()) m_table.resize(pos+1);
             for(const auto & ob_pair : m_table[pos]){
                 if(ob_pair.second == data){
                     throw std::invalid_argument {"Data must be unique"};
@@ -81,7 +81,7 @@ export namespace HASHI {
 
         private:
 
-        //метод-цепочек
+        //метод-цепочек, может добавить std:: optional???
         std::vector<std::forward_list<std::pair<Key,Type>>> m_table;
         size_t m_capasity {500};
     };
